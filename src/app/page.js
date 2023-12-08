@@ -23,11 +23,11 @@ export default function Home() {
     e.preventDefault()
     const {location} = formData
     const api_key = 'd87dba1411494061b8632600230712'
-    const api_url = `http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${location}`
+    const api_url = `https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${location}`
     const res = await fetch(api_url)
     const data = await res.json()
     setDatum(data)
-    console.log(data)
+    // console.log(data)
   }
   return (
     <div className='h-screen mt-2 md:m-5 md:flex md:flex-row md:gap-5'>
